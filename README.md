@@ -45,7 +45,7 @@ You can publish the config file of this package with this command:
 php artisan vendor:publish --provider="Kallencode\Wakatime\WakatimeServiceProvider"
 ```
 
-The following config file will be publoshed in `config/laravel-wakatime.php`
+The following config file will be published in `config/laravel-wakatime.php`
 
 ```php
 return [
@@ -73,8 +73,7 @@ $result = Wakatime::performRequest("new/resource", [
 
 ## Finding your API key
 
-Go to `https://wakatime.com/account/settings`
-
+Go to [https://wakatime.com/account/settings](https://wakatime.com/account/settings)
 
 
 
@@ -102,7 +101,7 @@ If you discover any security related issues, please email info@kallencode.nl ins
 - [All Contributors](../../contributors)
 
 ## About Kallencode
-[Kallencode](https://kallencode.nl).
+[Kallencode](https://kallencode.nl)
 
 ## License
 
