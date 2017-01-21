@@ -1,4 +1,4 @@
-# Very short description of the package
+# Wakatime API for laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/:package_name.svg?style=flat-square)](https://packagist.org/packages/kallencode/laravel-wakatime)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
@@ -7,9 +7,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/kallencode/laravel-wakatime.svg?style=flat-square)](https://scrutinizer-ci.com/g/kallencode/laravel-wakatime)
 [![Total Downloads](https://img.shields.io/packagist/dt/kallencode/laravel-wakatime.svg?style=flat-square)](https://packagist.org/packages/kallencode/laravel-wakatime)
 
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
-
+Simple package for interacting the the [Wakatime API](https://wakatime.com)
 
 ## Installation
 
@@ -47,7 +45,7 @@ You can publish the config file of this package with this command:
 php artisan vendor:publish --provider="Kallencode\Wakatime\WakatimeServiceProvider"
 ```
 
-Follow following config file will be publoshed in `config/laravel-wakatime.php`
+The following config file will be publoshed in `config/laravel-wakatime.php`
 
 ```php
 return [
@@ -57,6 +55,7 @@ return [
     'baseURl' => env('WAKATIME_BASE_URL','https://wakatime.com/api/v1/')
 
 ];
+```
 
 ## Usage
 
@@ -67,10 +66,17 @@ $userDurations = Wakatime::fetchUserDuration(\Carbon\Carbon::now());
 or use any not-yet-implemented wakatime API resource:
 
 ```php
-
-$result = Wakatime::performRequest();
-
+$result = Wakatime::performRequest("new/resource", [
+        'date' => \Carbon\Carbon::now()->format('Y-m-d'),
+        'project' => 'project'], []);
 ```
+
+## Finding your API key
+
+Go to `https://wakatime.com/account/settings`
+
+
+
 
 ## Changelog
 
@@ -95,8 +101,8 @@ If you discover any security related issues, please email info@kallencode.nl ins
 - [Roelof Kallenkoot](https://github.com/rkallenkoot)
 - [All Contributors](../../contributors)
 
-## About Spatie
-Spatie is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
+## About Kallencode
+[Kallencode](https://kallencode.nl).
 
 ## License
 
