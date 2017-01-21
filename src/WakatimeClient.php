@@ -47,10 +47,10 @@ class WakatimeClient
 
     public function performRequest(string $resource, array $headers = [], array $query = []) : Collection
     {
-        return collect($this->client->request('GET', "{$this->baseUrl}{$resource}", [
+        return collect(json_decode($this->client->request('GET', "{$this->baseUrl}{$resource}", [
             'headers' => $this->buildHeaders($headers),
             'query' => $query
-        ])->getBody()->getContents());
+        ])->getBody()->getContents(), true));
     }
 
     protected function buildHeaders(array $headers = []) : array
