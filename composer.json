@@ -1,0 +1,44 @@
+{
+    "name": "kallencode/laravel-wakatime",
+    "description": "A laravel 5 package to interact with the Wakatime API.",
+    "keywords": [
+        "kallencode",
+        "laravel",
+        "wakatime"
+    ],
+    "homepage": "https://github.com/kallencode/laravel-wakatime",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roelof Kallenkoot",
+            "email": "roelof@kallencode.nl",
+            "homepage": "https://kallencode.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.*",
+        "orchestra/testbench" : "3.3.x@dev",
+        "mockery/mockery": "^0.9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kallencode\\Wakatime\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kallencode\\Wakatime\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+  }
+}
