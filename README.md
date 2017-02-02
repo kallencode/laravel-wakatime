@@ -59,7 +59,7 @@ return [
 ## Usage
 
 ``` php
-$userDurations = Wakatime::fetchUserDuration(\Carbon\Carbon::now());
+$userDurations = Wakatime::fetchUserDurations(\Carbon\Carbon::now());
 ```
 
 or use any not-yet-implemented wakatime API resource:
