@@ -49,7 +49,7 @@ The following config file will be published in `config/laravel-wakatime.php`
 ```php
 return [
 
-    'apiKey' => env('WAKATIME_API_KEY'),
+    'apiKey' => env('WAKATIME_API_KEY','null'),
 
     'baseURl' => env('WAKATIME_BASE_URL','https://wakatime.com/api/v1/')
 
