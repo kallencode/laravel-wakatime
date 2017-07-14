@@ -40,5 +40,15 @@
     },
     "config": {
         "sort-packages": true
-  }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kallencode\\Wakatime\\WakatimeServiceProvider"
+            ],
+            "aliases": {
+                "Wakatime": "Kallencode\\Wakatime\\WakatimeFacade"
+            }
+        }
+    }
 }
