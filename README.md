@@ -60,14 +60,14 @@ return [
 ## Usage
 
 ``` php
-$userDurations = Wakatime::fetchUserDuration(\Carbon\Carbon::now());
+$userDurations = Wakatime::fetchUserDurations(Carbon::now());
 ```
 
 or use any not-yet-implemented wakatime API resource:
 
 ```php
 $result = Wakatime::performRequest("new/resource", [
-        'date' => \Carbon\Carbon::now()->format('Y-m-d'),
+        'date' => Carbon::now()->format('Y-m-d'),
         'project' => 'project'], []);
 ```
 
