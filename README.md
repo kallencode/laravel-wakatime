@@ -73,7 +73,7 @@ $result = Wakatime::performRequest("new/resource", [
 
 ## Finding your API key
 
-Go to [https://wakatime.com/account/settings](https://wakatime.com/account/settings)
+Go to [https://wakatime.com/account/settings](https://wakatime.com/settings/account)
 
 
 
